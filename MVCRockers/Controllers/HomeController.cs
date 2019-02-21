@@ -14,7 +14,7 @@ namespace MVCRockers.Controllers
         // Home/Index
         public ActionResult Index()
         {
-            return View();
+            return View("Splash");
         }
 
         [HandleError(ExceptionType = typeof(DivideByZeroException), View ="MathError")]
@@ -49,6 +49,7 @@ namespace MVCRockers.Controllers
             return PartialView("_ThanksForFeedback");
         }
 
+        
         public ActionResult Backstage(string secret, string format)
         {
             if (secret != "special")
